@@ -1,2 +1,2 @@
-/// @description Insert description here
-// You can write your code in this editor
+//need_play_sound = true;
+bullet_speed = 10

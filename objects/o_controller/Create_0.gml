@@ -1,2 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+
+kb_player = 0; 
+controller0_player = 0;
+controller1_player = 1;
