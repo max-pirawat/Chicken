@@ -4,6 +4,7 @@ enum player_state {
 	DASH,
 	JUMP,
 	DOUBLE_JUMP,
+	CROUCH,
 };
 
 enum jump_state {

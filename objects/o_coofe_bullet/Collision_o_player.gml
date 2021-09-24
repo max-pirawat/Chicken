@@ -1,4 +1,9 @@
-/// @description Insert description here
-// You can write your code in this editor
 
-other.x -= 10
+// Player get pushed
+if (image_alpha > 0.5) {
+	if (o_enemy.x >= other.x ) {
+		other.x -= 10;
+	} else {
+		other.x	+= 10;
+	}
+}

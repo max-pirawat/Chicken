@@ -76,6 +76,10 @@ if (jstate != jump_state.ON_GROUND && dash_active == 0) {
 	}
 }
 
+if (dash_active > 0) {
+	vsp = 0;	
+}
+
 vsp = max(vsp, -jump_max);
 y += vsp;
 var need_update_spr = false;
@@ -87,19 +91,16 @@ if (y > ground_y && jstate != jump_state.ON_GROUND) {
 }
 #endregion
 
-if (x<0) {
-	x = 0	
-}
-if (x>room_width) {
-	x = room_width
-}
-if (y<0) {
-	y = 0	
-}
+#region Room Boundary
+x = clamp(x, 0, room_width);
+if (y<0) y = 0	
+#endregion
+
 #region Sprite Management
 var abs_xspeed = abs(xspeed)
 var lock = global.player_lock[player_no];
 var new_aim = lock ? current_aim : get_aim(abs_xspeed, global.player_up[player_no] - global.player_down[player_no])
+var crouch = global.player_down[player_no] - global.player_up[player_no] > 0;
 if (jstate == jump_state.ON_GROUND) {
 	if (state == player_state.IDLE) {
 		if (abs_xspeed > 0 && abs_xspeed < dash_speed) {
@@ -108,6 +109,9 @@ if (jstate == jump_state.ON_GROUND) {
 		} else if (dash_active > 0) {
 			state = player_state.DASH;
 			set_current_spr(spr_dash, new_aim);
+		} else if (crouch) {
+			state = player_state.CROUCH;
+			set_current_spr(spr_crouch, new_aim);
 		} else if (current_aim != new_aim || need_update_spr) {
 			set_current_spr(spr_idle, new_aim);
 		}
@@ -130,6 +134,19 @@ if (jstate == jump_state.ON_GROUND) {
 			set_current_spr(spr_run, new_aim);
 		} else if (current_aim != new_aim || need_update_spr) {
 			set_current_spr(spr_dash, new_aim);	
+		}
+	} else if (state == player_state.CROUCH) {
+		if (abs_xspeed == 0 && !crouch) {
+			state = player_state.IDLE;
+			set_current_spr(spr_idle, new_aim);
+		} else if (dash_active > 0) {
+			state = player_state.DASH;
+			set_current_spr(spr_dash, new_aim);
+		} else if (abs_xspeed > 0) {
+			state = player_state.RUN;
+			set_current_spr(spr_run, new_aim);
+		} else if (current_aim != new_aim || need_update_spr) {
+			set_current_spr(spr_run, new_aim);	
 		}
 	}
 } else if (jstate <= jump_state.JUMPED_STILL_HOLD) {

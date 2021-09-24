@@ -1,6 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
 if (cooldown > 0) cooldown--;
 
 image_xscale += 0.2
+image_alpha =  clamp(4 * cooldown / duration, 0, 1.0);
+
 if (cooldown == 0) instance_destroy();

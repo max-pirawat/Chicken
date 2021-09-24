@@ -1,5 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-duration = room_speed * 2
+duration = room_speed * 1.6
 
 cooldown = duration

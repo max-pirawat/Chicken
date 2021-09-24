@@ -24,5 +24,10 @@ spr_double_jump = [
 	{ sprite: s_chicken_double_jump, offset_x: (59 - 32), offset_y: (10 - 64), dir: 45 },
 	{ sprite: s_chicken_double_jump, offset_x: (42 - 32), offset_y: (0 - 64), dir: 90 }];
 
+spr_crouch = [
+	{ sprite: s_chicken_crouch, offset_x: (63 - 32), offset_y: (46 - 64), dir: 0 },
+	{ sprite: s_chicken_crouch, offset_x: (59 - 32), offset_y: (46 - 64), dir: 45 },
+	{ sprite: s_chicken_crouch, offset_x: (42 - 32), offset_y: (46 - 64), dir: 90 }];
+
 obj_bullet = o_seed;
 current_spr = spr_idle;
