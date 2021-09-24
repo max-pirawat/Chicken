@@ -18,3 +18,8 @@ enum jump_state {
 	DOUBLE_JUMPING,
 	DOUBLE_JUMPED
 };
+enum enemy_state {
+	IDLE,
+	ATTACKING,
+	DIE
+};

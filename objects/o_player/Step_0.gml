@@ -68,7 +68,7 @@ if ((!jump || jump_cooldown == 0) && jstate == jump_state.DOUBLE_JUMPING) {
 if (jstate == jump_state.JUMPING || jstate == jump_state.DOUBLE_JUMPING) {
 	vsp -= jump_strength;	
 }
-if (jstate != jump_state.ON_GROUND && state != player_state.DASH) {
+if (jstate != jump_state.ON_GROUND && dash_active == 0) {
 	if (jump) {
 		vsp += grav_flying;
 	} else {
@@ -87,6 +87,15 @@ if (y > ground_y && jstate != jump_state.ON_GROUND) {
 }
 #endregion
 
+if (x<0) {
+	x = 0	
+}
+if (x>room_width) {
+	x = room_width
+}
+if (y<0) {
+	y = 0	
+}
 #region Sprite Management
 var abs_xspeed = abs(xspeed)
 var lock = global.player_lock[player_no];
@@ -96,7 +105,7 @@ if (jstate == jump_state.ON_GROUND) {
 		if (abs_xspeed > 0 && abs_xspeed < dash_speed) {
 			state = player_state.RUN;
 			set_current_spr(spr_run, new_aim);
-		} else if (abs_xspeed == dash_speed) {
+		} else if (dash_active > 0) {
 			state = player_state.DASH;
 			set_current_spr(spr_dash, new_aim);
 		} else if (current_aim != new_aim || need_update_spr) {
@@ -106,7 +115,7 @@ if (jstate == jump_state.ON_GROUND) {
 		if (abs_xspeed == 0) {
 			state = player_state.IDLE;
 			set_current_spr(spr_idle, new_aim);
-		} else if (abs_xspeed == dash_speed) {
+		} else if (dash_active > 0) {
 			state = player_state.DASH;
 			set_current_spr(spr_dash, new_aim);
 		} else if (current_aim != new_aim || need_update_spr) {
@@ -116,7 +125,7 @@ if (jstate == jump_state.ON_GROUND) {
 		if (abs_xspeed == 0) {
 			state = player_state.IDLE;
 			set_current_spr(spr_idle, new_aim);
-		} else if (abs_xspeed > 0 && abs_xspeed < dash_speed) {
+		} else if (abs_xspeed > 0 && dash_active == 0) {
 			state = player_state.RUN;
 			set_current_spr(spr_run, new_aim);
 		} else if (current_aim != new_aim || need_update_spr) {
