@@ -5,7 +5,22 @@ if (dash_cooldown > 0) dash_cooldown--;
 if (dash_active > 0) dash_active--;
 if (fire_cooldown > 0) fire_cooldown--;
 if (jump_cooldown > 0) jump_cooldown--;
+if (hurt_cooldown > 0) hurt_cooldown--;
+if (die_cooldown > 0) die_cooldown--;
 #endregion
+
+if (state == player_state.DYING) {
+	y -= 1;
+	image_alpha =  clamp(4 * die_cooldown / die_duration, 0, 1.0);
+	if (die_cooldown == 0) {
+		state = player_state.DIED;	
+	}
+	return;	
+}
+
+if (state == player_state.DIED) {
+	return;	
+}
 
 #region Player Movement
 hsp += player_speed * (global.player_right[player_no] - global.player_left[player_no]);
@@ -165,5 +180,12 @@ if (fire && fire_cooldown == 0) {
 	fire_cooldown = fire_disable;
 	var dir = player_facing > 0 ? current_spr[current_aim].dir : 180 - current_spr[current_aim].dir;
 	fire_bullet(x + player_facing * current_spr[current_aim].offset_x, y + current_spr[current_aim].offset_y, dir, obj_bullet);
+}
+fire = global.player_special[player_no];
+if (fire && fire_cooldown == 0 && specials > 0) {
+	specials--;
+	fire_cooldown = fire_disable;
+	var dir = player_facing > 0 ? current_spr[current_aim].dir : 180 - current_spr[current_aim].dir;
+	fire_bullet(x + player_facing * current_spr[current_aim].offset_x, y + current_spr[current_aim].offset_y, dir, obj_special_bullet);
 }
 #endregion

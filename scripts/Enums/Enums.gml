@@ -5,6 +5,8 @@ enum player_state {
 	JUMP,
 	DOUBLE_JUMP,
 	CROUCH,
+	DYING,
+	DIED
 };
 
 enum jump_state {
