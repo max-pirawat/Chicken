@@ -24,5 +24,6 @@ enum jump_state {
 enum enemy_state {
 	IDLE,
 	ATTACKING,
-	DIE
+	DYING,
+	DIED
 };

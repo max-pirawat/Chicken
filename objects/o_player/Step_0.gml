@@ -182,7 +182,7 @@ if (fire && fire_cooldown == 0) {
 	fire_bullet(x + player_facing * current_spr[current_aim].offset_x, y + current_spr[current_aim].offset_y, dir, obj_bullet);
 }
 fire = global.player_special[player_no];
-if (fire && fire_cooldown == 0 && specials > 0) {
+if (fire && fire_cooldown == 0 && specials >= 1) {
 	specials--;
 	fire_cooldown = fire_disable;
 	var dir = player_facing > 0 ? current_spr[current_aim].dir : 180 - current_spr[current_aim].dir;

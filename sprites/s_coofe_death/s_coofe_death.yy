@@ -35,7 +35,7 @@
     "spriteId": {"name":"s_coofe_death","path":"sprites/s_coofe_death/s_coofe_death.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 2.0,
+    "playbackSpeed": 4.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

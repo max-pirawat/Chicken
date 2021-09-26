@@ -3,7 +3,7 @@
     "name": "s_seed",
     "path": "sprites/s_seed/s_seed.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
