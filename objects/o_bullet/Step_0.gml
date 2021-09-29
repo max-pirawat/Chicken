@@ -16,7 +16,7 @@ if(x < 0 || x > room_width || y < 0 || y > room_height) {
 #region Enemey collision
 var enemy = instance_place(x, y, o_enemy)
 if (enemy != noone && enemy.state < enemy_state.DYING) {	
-	o_player.specials += 0.05;
+	o_player.specials = min(o_player.specials + 0.05, o_player.max_specials);
 	if (enemy.hp > bullet_dmg) {
 		enemy.hp -= bullet_dmg;
 	} else {

@@ -16,7 +16,8 @@ grav = 1;
 grav_flying = 1;
 ground_y = y;
 hp = 3;
-specials = 5;
+specials = 3;
+max_specials = 5;
 #endregion
 
 #region Dynamic Properties
@@ -33,6 +34,7 @@ hurt_cooldown = 0;
 die_cooldown = 0;
 hsp = 0; // horizontal speed
 vsp = 0;
+my_platform = noone;
 #endregion
 
 #region Methods

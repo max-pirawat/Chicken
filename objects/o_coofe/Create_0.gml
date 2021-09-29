@@ -1,8 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
 event_inherited()
 shoot_period = room_speed*4;
-hp = 200
+hp = 2000
 
 state = enemy_state.IDLE;
 shoot_cooldown = shoot_period;
@@ -24,7 +22,6 @@ shoot = function() {
 		bullet.bullet_speed = image_xscale > 0 ? -10: 10;
 		bullet.cooldown = room_speed*2
 	}
-	
 }
 
 die = function() {

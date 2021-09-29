@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "common",
+    "path": "folders/Objects/common.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_gui",

@@ -96,12 +96,35 @@ if (dash_active > 0) {
 }
 
 vsp = max(vsp, -jump_max);
+var old_y = y;
 y += vsp;
+
+// Check if jump has landed on a platform
 var need_update_spr = false;
+if (jstate != jump_state.ON_GROUND) {
+	with (o_platform) {
+		if (old_y < self.bbox_top && other.y >= self.bbox_top && other.bbox_right >= self.bbox_left && other.bbox_left <= self.bbox_right) {
+			other.y = self.bbox_top;
+			other.vsp = 0;
+			other.jstate = jump_state.ON_GROUND;
+			other.my_platform = self.id;
+			need_update_spr = true;
+		}
+	}
+}
+
+// Falling off platform
+if (my_platform != noone && (bbox_right < my_platform.bbox_left || bbox_left > my_platform.bbox_right)) {
+	jstate = jump_state.DOUBLE_JUMPED;
+	my_platforn = noone;
+	need_update_spr = true;
+}
+
 if (y > ground_y && jstate != jump_state.ON_GROUND) {
 	y = ground_y;
 	vsp = 0;
 	jstate = jump_state.ON_GROUND;
+	my_platform = noone;
 	need_update_spr = true;
 }
 #endregion
