@@ -43,7 +43,7 @@
     {"id":{"name":"s_prisonerhat","path":"sprites/s_prisonerhat/s_prisonerhat.yy",},"order":54,},
     {"id":{"name":"s_coofe_attack","path":"sprites/s_coofe_attack/s_coofe_attack.yy",},"order":15,},
     {"id":{"name":"background","path":"sprites/background/background.yy",},"order":20,},
-    {"id":{"name":"o_caffeine_bullet","path":"objects/o_caffeine_bullet/o_caffeine_bullet.yy",},"order":2,},
+    {"id":{"name":"o_caffeine_bullet","path":"objects/o_caffeine_bullet/o_caffeine_bullet.yy",},"order":4,},
     {"id":{"name":"s_caffeine","path":"sprites/s_caffeine/s_caffeine.yy",},"order":61,},
     {"id":{"name":"Functions","path":"scripts/Functions/Functions.yy",},"order":1,},
     {"id":{"name":"s_suba","path":"sprites/s_suba/s_suba.yy",},"order":30,},

@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "player",
-    "path": "folders/Objects/player.yy",
+    "name": "enemy",
+    "path": "folders/Objects/enemy.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_caffeine_bullet",

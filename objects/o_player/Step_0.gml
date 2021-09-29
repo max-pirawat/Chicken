@@ -54,7 +54,8 @@ x += xspeed;
 
 #region jump
 var jump = global.player_jump[player_no];
-if (jump && jstate == jump_state.ON_GROUND) {
+var crouch = global.player_down[player_no] - global.player_up[player_no] > 0;
+if (jump && !crouch && jstate == jump_state.ON_GROUND) {
 	jstate = jump_state.JUMPING;
 	vsp = -jump_initial;
 	jump_cooldown = jump_hold;
@@ -120,6 +121,14 @@ if (my_platform != noone && (bbox_right < my_platform.bbox_left || bbox_left > m
 	need_update_spr = true;
 }
 
+// jumping down platform
+if (my_platform != noone && jump && crouch) {
+	jstate = jump_state.DOUBLE_JUMPED;
+	y = my_platform.bbox_top + 1;
+	my_platforn = noone;
+	need_update_spr = true;
+}
+
 if (y > ground_y && jstate != jump_state.ON_GROUND) {
 	y = ground_y;
 	vsp = 0;
@@ -138,7 +147,6 @@ if (y<0) y = 0
 var abs_xspeed = abs(xspeed)
 var lock = global.player_lock[player_no];
 var new_aim = lock ? current_aim : get_aim(abs_xspeed, global.player_up[player_no] - global.player_down[player_no])
-var crouch = global.player_down[player_no] - global.player_up[player_no] > 0;
 if (jstate == jump_state.ON_GROUND) {
 	if (state == player_state.IDLE) {
 		if (abs_xspeed > 0 && abs_xspeed < dash_speed) {
