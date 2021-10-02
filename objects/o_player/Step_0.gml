@@ -41,9 +41,12 @@ if xspeed != 0 {
 	player_facing = xspeed < 0 ? -1 : 1
 }
 
-if (dash && dash_cooldown == 0) {
-	dash_cooldown = dash_disable
-	dash_active = dash_duration
+if (dash && dash_cooldown == 0 && (jstate == jump_state.ON_GROUND || (jump_dash > 0))) {
+	dash_cooldown = dash_disable;
+	dash_active = dash_duration;
+	if (jstate != jump_state.ON_GROUND) {
+		jump_dash--;
+	}
 }
 if (dash_active > 0) {
 	xspeed = player_facing * dash_speed
@@ -109,6 +112,7 @@ if (jstate != jump_state.ON_GROUND) {
 			other.vsp = 0;
 			other.jstate = jump_state.ON_GROUND;
 			other.my_platform = self.id;
+			other.jump_dash = other.max_jump_dash;
 			need_update_spr = true;
 		}
 	}
@@ -121,6 +125,10 @@ if (my_platform != noone && (bbox_right < my_platform.bbox_left || bbox_left > m
 	need_update_spr = true;
 }
 
+if (my_platform != noone && jstate != jump_state.ON_GROUND) {
+	my_platform = noone;	
+}
+
 // jumping down platform
 if (my_platform != noone && jump && crouch) {
 	jstate = jump_state.DOUBLE_JUMPED;
@@ -129,11 +137,13 @@ if (my_platform != noone && jump && crouch) {
 	need_update_spr = true;
 }
 
+
 if (y > ground_y && jstate != jump_state.ON_GROUND) {
 	y = ground_y;
 	vsp = 0;
 	jstate = jump_state.ON_GROUND;
 	my_platform = noone;
+	jump_dash = max_jump_dash;
 	need_update_spr = true;
 }
 #endregion
@@ -192,7 +202,7 @@ if (jstate == jump_state.ON_GROUND) {
 			state = player_state.RUN;
 			set_current_spr(spr_run, new_aim);
 		} else if (current_aim != new_aim || need_update_spr) {
-			set_current_spr(spr_run, new_aim);	
+			set_current_spr(spr_crouch, new_aim);	
 		}
 	}
 } else if (jstate <= jump_state.JUMPED_STILL_HOLD) {

@@ -18,6 +18,7 @@ ground_y = y;
 hp = 3;
 specials = 3;
 max_specials = 5;
+max_jump_dash = 1;
 #endregion
 
 #region Dynamic Properties
@@ -35,6 +36,11 @@ die_cooldown = 0;
 hsp = 0; // horizontal speed
 vsp = 0;
 my_platform = noone;
+jump_dash = max_jump_dash;
+#endregion
+
+#region accessory 
+hat = create_accessory(self.id, global.a_cowboy_hat);
 #endregion
 
 #region Methods

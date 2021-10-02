@@ -32,3 +32,12 @@ function get_aim(dx, dy) {
 		return 0;
 	}
 }
+
+function create_accessory(parent, a_template) {
+	var accessory = instance_create_layer(parent.x,  parent.y, "Layer_Player", o_accessory);
+	accessory.sprite_index = a_template.sprite;
+	accessory.parent = parent;
+	accessory.offset_y = a_template.offset_y;
+	accessory.aim = a_template.aim;
+	return accessory;	
+}
