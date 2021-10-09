@@ -1,14 +1,22 @@
 /// @description Movement
 
 #region Effect Cooldown
+var need_update_spr = false;
 if (dash_cooldown > 0) dash_cooldown--;
 if (dash_active > 0) dash_active--;
 if (fire_cooldown > 0) fire_cooldown--;
 if (jump_cooldown > 0) jump_cooldown--;
 if (hurt_cooldown > 0) hurt_cooldown--;
+if (knockback_cooldown > 0) {
+	knockback_cooldown--;
+	if (knockback_cooldown == 0) {
+		need_update_spr = true;
+	}
+}
 if (die_cooldown > 0) die_cooldown--;
 #endregion
 
+#region Player Died
 if (state == player_state.DYING) {
 	y -= 1;
 	image_alpha =  clamp(4 * die_cooldown / die_duration, 0, 1.0);
@@ -21,25 +29,34 @@ if (state == player_state.DYING) {
 if (state == player_state.DIED) {
 	return;	
 }
+#endregion
+
+#region Knockback
+if (knockback_cooldown > 0) {
+	disable_control(player_no);	
+}
+#endregion
 
 #region Player Movement
 hsp += player_speed * (global.player_right[player_no] - global.player_left[player_no]);
 
 // drag
-hsp = lerp(hsp, 0, drag);
+if (knockback_cooldown == 0) {
+	hsp = lerp(hsp, 0, drag);
     
-// stop
-if abs(hsp) <= 1 hsp = 0;
+	// stop
+	if abs(hsp) <= 1 hsp = 0;
     
-// limit speed
-hsp = sign(hsp) * min(abs(hsp), player_speed);
-    
+	// limit speed
+	hsp = sign(hsp) * min(abs(hsp), player_speed);
+	
+	if hsp != 0 and knockback_cooldown == 0 {
+		player_facing = hsp < 0 ? -1 : 1
+	}
+}
+
 var xspeed = hsp;
 var dash = global.player_dash[player_no];
-
-if xspeed != 0 {
-	player_facing = xspeed < 0 ? -1 : 1
-}
 
 if (dash && dash_cooldown == 0 && (jstate == jump_state.ON_GROUND || (jump_dash > 0))) {
 	dash_cooldown = dash_disable;
@@ -104,7 +121,6 @@ var old_y = y;
 y += vsp;
 
 // Check if jump has landed on a platform
-var need_update_spr = false;
 if (jstate != jump_state.ON_GROUND) {
 	with (o_platform) {
 		if (old_y < self.bbox_top && other.y >= self.bbox_top && other.bbox_right >= self.bbox_left && other.bbox_left <= self.bbox_right) {
@@ -114,6 +130,7 @@ if (jstate != jump_state.ON_GROUND) {
 			other.my_platform = self.id;
 			other.jump_dash = other.max_jump_dash;
 			need_update_spr = true;
+			other.knockback_cooldown = 0
 		}
 	}
 }
@@ -145,6 +162,7 @@ if (y > ground_y && jstate != jump_state.ON_GROUND) {
 	my_platform = noone;
 	jump_dash = max_jump_dash;
 	need_update_spr = true;
+	knockback_cooldown = 0;
 }
 #endregion
 
@@ -157,60 +175,62 @@ if (y<0) y = 0
 var abs_xspeed = abs(xspeed)
 var lock = global.player_lock[player_no];
 var new_aim = lock ? current_aim : get_aim(abs_xspeed, global.player_up[player_no] - global.player_down[player_no])
-if (jstate == jump_state.ON_GROUND) {
-	if (state == player_state.IDLE) {
-		if (abs_xspeed > 0 && abs_xspeed < dash_speed) {
-			state = player_state.RUN;
-			set_current_spr(spr_run, new_aim);
-		} else if (dash_active > 0) {
-			state = player_state.DASH;
-			set_current_spr(spr_dash, new_aim);
-		} else if (crouch) {
-			state = player_state.CROUCH;
-			set_current_spr(spr_crouch, new_aim);
-		} else if (current_aim != new_aim || need_update_spr) {
-			set_current_spr(spr_idle, new_aim);
+if (knockback_cooldown == 0) {
+	if (jstate == jump_state.ON_GROUND) {
+		if (state == player_state.IDLE) {
+			if (abs_xspeed > 0 && abs_xspeed < dash_speed) {
+				state = player_state.RUN;
+				set_current_spr(spr_run, new_aim);
+			} else if (dash_active > 0) {
+				state = player_state.DASH;
+				set_current_spr(spr_dash, new_aim);
+			} else if (crouch) {
+				state = player_state.CROUCH;
+				set_current_spr(spr_crouch, new_aim);
+			} else if (current_aim != new_aim || need_update_spr) {
+				set_current_spr(spr_idle, new_aim);
+			}
+		} else if (state == player_state.RUN) {
+			if (abs_xspeed == 0) {
+				state = player_state.IDLE;
+				set_current_spr(spr_idle, new_aim);
+			} else if (dash_active > 0) {
+				state = player_state.DASH;
+				set_current_spr(spr_dash, new_aim);
+			} else if (current_aim != new_aim || need_update_spr) {
+				set_current_spr(spr_run, new_aim);	
+			}
+		} else if (state == player_state.DASH) {
+			if (abs_xspeed == 0) {
+				state = player_state.IDLE;
+				set_current_spr(spr_idle, new_aim);
+			} else if (abs_xspeed > 0 && dash_active == 0) {
+				state = player_state.RUN;
+				set_current_spr(spr_run, new_aim);
+			} else if (current_aim != new_aim || need_update_spr) {
+				set_current_spr(spr_dash, new_aim);	
+			}
+		} else if (state == player_state.CROUCH) {
+			if (abs_xspeed == 0 && !crouch) {
+				state = player_state.IDLE;
+				set_current_spr(spr_idle, new_aim);
+			} else if (dash_active > 0) {
+				state = player_state.DASH;
+				set_current_spr(spr_dash, new_aim);
+			} else if (abs_xspeed > 0) {
+				state = player_state.RUN;
+				set_current_spr(spr_run, new_aim);
+			} else if (current_aim != new_aim || need_update_spr) {
+				set_current_spr(spr_crouch, new_aim);	
+			}
 		}
-	} else if (state == player_state.RUN) {
-		if (abs_xspeed == 0) {
-			state = player_state.IDLE;
-			set_current_spr(spr_idle, new_aim);
-		} else if (dash_active > 0) {
-			state = player_state.DASH;
-			set_current_spr(spr_dash, new_aim);
-		} else if (current_aim != new_aim || need_update_spr) {
-			set_current_spr(spr_run, new_aim);	
-		}
-	} else if (state == player_state.DASH) {
-		if (abs_xspeed == 0) {
-			state = player_state.IDLE;
-			set_current_spr(spr_idle, new_aim);
-		} else if (abs_xspeed > 0 && dash_active == 0) {
-			state = player_state.RUN;
-			set_current_spr(spr_run, new_aim);
-		} else if (current_aim != new_aim || need_update_spr) {
-			set_current_spr(spr_dash, new_aim);	
-		}
-	} else if (state == player_state.CROUCH) {
-		if (abs_xspeed == 0 && !crouch) {
-			state = player_state.IDLE;
-			set_current_spr(spr_idle, new_aim);
-		} else if (dash_active > 0) {
-			state = player_state.DASH;
-			set_current_spr(spr_dash, new_aim);
-		} else if (abs_xspeed > 0) {
-			state = player_state.RUN;
-			set_current_spr(spr_run, new_aim);
-		} else if (current_aim != new_aim || need_update_spr) {
-			set_current_spr(spr_crouch, new_aim);	
-		}
+	} else if (jstate <= jump_state.JUMPED_STILL_HOLD) {
+		// jump	
+		set_current_spr(spr_jump, new_aim);
+	} else {
+		// double jump
+		set_current_spr(spr_double_jump, new_aim);
 	}
-} else if (jstate <= jump_state.JUMPED_STILL_HOLD) {
-	// jump	
-	set_current_spr(spr_jump, new_aim);
-} else {
-	// double jump
-	set_current_spr(spr_double_jump, new_aim);
 }
 image_xscale = player_facing
 #endregion 

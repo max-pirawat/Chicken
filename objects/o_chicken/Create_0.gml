@@ -32,7 +32,8 @@ spr_crouch = [
 spr_dying = [
 	{ sprite: s_chicken_dying, offset_x: (63 - 32), offset_y: (46 - 64), dir: 0, img_aim: 0 }];
 	
-
+spr_knockback= [
+	{ sprite: s_chicken_knockback, offset_x: (63 - 32), offset_y: (46 - 64), dir: 0, img_aim: 0 }];
 
 obj_bullet = o_seed;
 obj_special_bullet = o_big_seed;

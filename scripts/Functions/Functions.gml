@@ -2,7 +2,7 @@ function fire_bullet(x, y, dir, obj_bullet) {
 	var bullet = instance_create_layer(x,  y, "Layer_Bullet", obj_bullet);
 	bullet.dir = dir;
 	bullet.image_angle = dir;
-	if dir > 90 and dir < 270 bullet.image_yscale =-1;
+	if dir > 90 and dir < 270 bullet.image_yscale =-bullet.image_yscale;
 }
 
 function set_current_spr(spr, aim) {
@@ -40,4 +40,17 @@ function create_accessory(parent, a_template) {
 	accessory.offset_y = a_template.offset_y;
 	accessory.aim = a_template.aim;
 	return accessory;	
+}
+
+function disable_control(player) {
+	global.player_up[player] = false;
+	global.player_down[player] = false;
+	global.player_left[player] = false;
+	global.player_right[player] = false;
+	global.player_fire[player] = false;
+	global.player_special[player] = false;
+	global.player_jump[player] = false;
+	global.player_switch[player] = false;
+	global.player_lock[player] = false;
+	global.player_dash[player] = false;
 }
