@@ -37,5 +37,6 @@ spr_knockback= [
 
 obj_bullet = o_seed;
 obj_special_bullet = o_big_seed;
+obj_sspecial_bullet = o_egg;
 current_spr = spr_idle;
 current_aim = 0;

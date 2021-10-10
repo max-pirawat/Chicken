@@ -3,6 +3,13 @@
 //    audio_play_sound(sound, 0, 0);   
 //}
 
+if (sprite_index == spr_hit) {
+	if (image_index > image_number-1) {
+		instance_destroy();
+	}
+	return;
+}
+
 // Move bullet
 x += lengthdir_x(bullet_speed, dir);
 y += lengthdir_y(bullet_speed, dir);
@@ -23,7 +30,12 @@ if (enemy != noone && enemy.state < enemy_state.DYING) {
 		enemy.die();
 	}
 
-	instance_destroy();
+	if (spr_hit == noone) {
+		instance_destroy();
+	} else {
+		sprite_index = spr_hit;
+		image_index = 0;
+	}
 	return;
 }
 #endregion

@@ -10,6 +10,7 @@ if (hurt_cooldown > 0) hurt_cooldown--;
 if (knockback_cooldown > 0) {
 	knockback_cooldown--;
 	if (knockback_cooldown == 0) {
+		hsp = 0;
 		need_update_spr = true;
 	}
 }
@@ -50,7 +51,7 @@ if (knockback_cooldown == 0) {
 	// limit speed
 	hsp = sign(hsp) * min(abs(hsp), player_speed);
 	
-	if hsp != 0 and knockback_cooldown == 0 {
+	if hsp != 0 {
 		player_facing = hsp < 0 ? -1 : 1
 	}
 }
@@ -130,7 +131,8 @@ if (jstate != jump_state.ON_GROUND) {
 			other.my_platform = self.id;
 			other.jump_dash = other.max_jump_dash;
 			need_update_spr = true;
-			other.knockback_cooldown = 0
+			other.knockback_cooldown = 0;
+			other.hsp = 0;
 		}
 	}
 }
@@ -163,6 +165,7 @@ if (y > ground_y && jstate != jump_state.ON_GROUND) {
 	jump_dash = max_jump_dash;
 	need_update_spr = true;
 	knockback_cooldown = 0;
+	hsp = 0;
 }
 #endregion
 
@@ -244,9 +247,17 @@ if (fire && fire_cooldown == 0) {
 }
 fire = global.player_special[player_no];
 if (fire && fire_cooldown == 0 && specials >= 1) {
-	specials--;
-	fire_cooldown = fire_disable;
-	var dir = player_facing > 0 ? current_spr[current_aim].dir : 180 - current_spr[current_aim].dir;
-	fire_bullet(x + player_facing * current_spr[current_aim].offset_x, y + current_spr[current_aim].offset_y, dir, obj_special_bullet);
+	if specials >= 5 {
+		specials -= 5;
+		fire_cooldown = fire_disable;
+		var dir = player_facing > 0 ? current_spr[current_aim].dir : 180 - current_spr[current_aim].dir;
+		fire_bullet(x + player_facing * current_spr[current_aim].offset_x, y + current_spr[current_aim].offset_y, dir, obj_sspecial_bullet);
+	}else if specials >= 1 {
+		specials--;
+		fire_cooldown = fire_disable;
+		var dir = player_facing > 0 ? current_spr[current_aim].dir : 180 - current_spr[current_aim].dir;
+		fire_bullet(x + player_facing * current_spr[current_aim].offset_x, y + current_spr[current_aim].offset_y, dir, obj_special_bullet);
+	}
+	
 }
 #endregion

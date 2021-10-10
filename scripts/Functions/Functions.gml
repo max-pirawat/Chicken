@@ -54,3 +54,15 @@ function disable_control(player) {
 	global.player_lock[player] = false;
 	global.player_dash[player] = false;
 }
+
+function approach(s, e, shift) {
+	if (s < e) {
+		return min(s + shift, e);
+	} else {
+		return max(s - shift, e);
+	}
+}
+
+function shake_screen(duration, force) {
+	o_controller.shake(duration, force);	
+}

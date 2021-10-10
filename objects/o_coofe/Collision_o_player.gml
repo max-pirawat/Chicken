@@ -1,4 +1,4 @@
-if (image_alpha > 0.5) {
+if (state >= enemy_state.DYING) {
 	if (o_player.state < player_state.DYING) {
 		if (o_enemy.x >= other.x ) {
 			other.hurt(-3);
