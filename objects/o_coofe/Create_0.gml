@@ -1,6 +1,8 @@
 event_inherited()
 shoot_period = room_speed*4;
 hp = 2000
+spr_idle = s_coofe_idle
+spr_attack = s_coofe_attack
 
 state = enemy_state.IDLE;
 shoot_cooldown = shoot_period;
@@ -19,46 +21,30 @@ prepare_to_shoot = function() {
 	}
 }
 
+ready_to_shoot = function() {
+	return image_index > image_number - 1;
+}
+
+// Return true if done
 shoot = function() {
 	if (next_attack == 0){
 		var bullet = instance_create_layer(x - 50,  y, "Layer_Bullet", o_coofe_bullet);
 		bullet.shooter = self.id;
 	} else if (next_attack == 1) {
-		var bullet = instance_create_layer(x - 50,  y - 30, "Layer_Bullet", o_caffeine_bullet);
-		bullet.bullet_speed = image_xscale > 0 ? -10: 10;
-		bullet.cooldown = 1
-		
-		bullet = instance_create_layer(x - 50,  y - 30, "Layer_Bullet", o_caffeine_bullet);
-		bullet.bullet_speed = image_xscale > 0 ? -10: 10;
-		bullet.cooldown = room_speed*1
-		
-		bullet = instance_create_layer(x - 50,  y - 30, "Layer_Bullet", o_caffeine_bullet);
-		bullet.bullet_speed = image_xscale > 0 ? -10: 10;
-		bullet.cooldown = room_speed*2
+		var bullet_speed = 10;
+		var dir = image_xscale > 0 ? 180 : 0;
+		enemy_fire_normal_bullet(x-50, y-30, s_caffeine, 1, bullet_speed, dir);
+		enemy_fire_normal_bullet(x-50, y-30, s_caffeine, room_speed*1, bullet_speed, dir);
+		enemy_fire_normal_bullet(x-50, y-30, s_caffeine, room_speed*2, bullet_speed, dir);
 	} else {
-		var bullet = instance_create_layer(x - 50,  y - 30, "Layer_Bullet", o_caffeine_bullet);
-		bullet.bullet_speed = image_xscale > 0 ? -15: 15;
-		bullet.cooldown = 1
-		
-		bullet = instance_create_layer(x - 50,  y - 60, "Layer_Bullet", o_caffeine_bullet);
-		bullet.bullet_speed = image_xscale > 0 ? -15: 15;
-		bullet.cooldown = room_speed*0.8
-		
-		bullet = instance_create_layer(x - 50,  y - 90, "Layer_Bullet", o_caffeine_bullet);
-		bullet.bullet_speed = image_xscale > 0 ? -15: 15;
-		bullet.cooldown = room_speed*1.6
-		
-		bullet = instance_create_layer(x - 50,  y - 30, "Layer_Bullet", o_caffeine_bullet);
-		bullet.bullet_speed = image_xscale > 0 ? -15: 15;
-		bullet.cooldown = room_speed*2.4
-		
-		bullet = instance_create_layer(x - 50,  y - 60, "Layer_Bullet", o_caffeine_bullet);
-		bullet.bullet_speed = image_xscale > 0 ? -15: 15;
-		bullet.cooldown = room_speed*3.2
-		
-		bullet = instance_create_layer(x - 50,  y - 90, "Layer_Bullet", o_caffeine_bullet);
-		bullet.bullet_speed = image_xscale > 0 ? -15: 15;
-		bullet.cooldown = room_speed*4.0
+		var bullet_speed = 15;
+		var dir = image_xscale > 0 ? 180 : 0; 
+		enemy_fire_normal_bullet(x-50, y-30, s_caffeine, 1, bullet_speed, dir);
+		enemy_fire_normal_bullet(x-50, y-60, s_caffeine, room_speed*0.8, bullet_speed, dir);
+		enemy_fire_normal_bullet(x-50, y-90, s_caffeine, room_speed*1.6, bullet_speed, dir);
+		enemy_fire_normal_bullet(x-50, y-30, s_caffeine, room_speed*2.4, bullet_speed, dir);
+		enemy_fire_normal_bullet(x-50, y-60, s_caffeine, room_speed*3.2, bullet_speed, dir);
+		enemy_fire_normal_bullet(x-50, y-90, s_caffeine, room_speed*4.0, bullet_speed, dir);
 	}
 }
 

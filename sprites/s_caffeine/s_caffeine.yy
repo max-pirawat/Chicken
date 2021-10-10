@@ -93,8 +93,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "stage1",
-    "path": "folders/Sprites/stage1.yy",
+    "name": "coofe",
+    "path": "folders/Sprites/stage1/coofe.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_caffeine",

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "coofe_bullet",
-    "path": "sprites/coofe_bullet/coofe_bullet.yy",
+    "name": "s_coofe_bullet",
+    "path": "sprites/s_coofe_bullet/s_coofe_bullet.yy",
   },
   "solid": false,
   "visible": true,

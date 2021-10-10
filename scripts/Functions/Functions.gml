@@ -5,6 +5,39 @@ function fire_bullet(x, y, dir, obj_bullet) {
 	if dir > 90 and dir < 270 bullet.image_yscale =-bullet.image_yscale;
 }
 
+function enemy_fire_normal_bullet(x, y, spr, cooldown, bullet_speed, dir) {
+	var bullet = instance_create_layer(x,  y, "Layer_Bullet", o_normal_bullet);
+	bullet.shooter = self.id;
+	bullet.cooldown = cooldown;
+	bullet.bullet_speed = bullet_speed;
+	bullet.dir = dir;
+	if spr != noone {
+		bullet.sprite_index = spr;
+	}
+}
+
+function enemy_fire_dir_bullet(x, y, spr, cooldown, bullet_speed) {
+	var bullet = instance_create_layer(x,  y, "Layer_Bullet", o_dir_bullet);
+	bullet.shooter = self.id;
+	bullet.cooldown = cooldown;
+	bullet.bullet_speed = bullet_speed;
+	if spr != noone {
+		bullet.sprite_index = spr;
+	}
+}
+
+function enemy_fire_bounce_bullet(x, y, spr, cooldown, destroy_duration, bullet_speed, dir) {
+	var bullet = instance_create_layer(x,  y, "Layer_Bullet", o_bounce_bullet);
+	bullet.shooter = self.id;
+	bullet.cooldown = cooldown;
+	bullet.destroy_cooldown = destroy_duration;
+	bullet.bullet_speed = bullet_speed;
+	bullet.dir = dir;
+	if spr != noone {
+		bullet.sprite_index = spr;
+	}
+}
+
 function set_current_spr(spr, aim) {
 	if (current_spr != spr) {
 		current_spr = spr;

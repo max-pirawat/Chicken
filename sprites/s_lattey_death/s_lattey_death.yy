@@ -73,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "stage1",
-    "path": "folders/Sprites/stage1.yy",
+    "name": "lattey",
+    "path": "folders/Sprites/stage1/lattey.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_lattey_death",
