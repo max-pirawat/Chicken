@@ -11,8 +11,10 @@ cooldown_done = function() {
 process_cooldown = function() {
 	if (cooldown > 0) {
 		cooldown--;
-		if (cooldown == 0) {
+		if (cooldown <= 0) {
+			cooldown = 0;
 			image_alpha=1
+			image_angle=dir;
 			cooldown_done();
 		}else{
 			return false;
