@@ -38,6 +38,13 @@ function enemy_fire_bounce_bullet(x, y, spr, cooldown, destroy_duration, bullet_
 	}
 }
 
+function enemy_fire_cream_bullet(x, y, cooldown, bullet_speed) {
+	var bullet = instance_create_layer(x,  y, "Layer_Bullet", o_cream_bullet);
+	bullet.shooter = self.id;
+	bullet.cooldown = cooldown;
+	bullet.bullet_speed = bullet_speed;
+}
+
 function set_current_spr(spr, aim) {
 	if (current_spr != spr) {
 		current_spr = spr;

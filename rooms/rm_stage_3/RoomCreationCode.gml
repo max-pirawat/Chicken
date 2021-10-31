@@ -1,0 +1,1 @@
+global.ground_y = o_player.y

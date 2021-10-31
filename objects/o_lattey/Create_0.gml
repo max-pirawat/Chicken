@@ -1,6 +1,6 @@
 event_inherited()
 shoot_period = room_speed*4;
-hp = 2000
+hp = 1500
 spr_idle = s_lattey_idle
 spr_attack = s_lattey_attack1
 can_collide_with_player = false;
@@ -36,7 +36,7 @@ shoot = function() {
 		var bullet_speed = 20;
 		enemy_fire_dir_bullet(x + 14 * image_xscale, y - 705 * image_yscale, s_lattey_shot, 1, bullet_speed);
 		enemy_fire_dir_bullet(x + 14 * image_xscale, y - 705 * image_yscale, s_lattey_shot, room_speed * 0.5, bullet_speed);
-		enemy_fire_dir_bullet(x + 14 * image_yscale, y - 705 * image_yscale, s_lattey_shot, room_speed * 1, bullet_speed);
+		enemy_fire_dir_bullet(x + 14 * image_xscale, y - 705 * image_yscale, s_lattey_shot, room_speed * 1, bullet_speed);
 	} else if (next_attack == 1) {
 		var bullet_speed = 12;
 		var dir = 270;

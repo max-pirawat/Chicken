@@ -122,9 +122,11 @@ var old_y = y;
 y += vsp;
 
 // Check if jump has landed on a platform
+var my_bbox_right = bbox_right - (player_facing > 0 ? 20 : 20)
+var my_bbox_left = bbox_left + (player_facing > 0 ? 20 : 20)
 if (jstate != jump_state.ON_GROUND) {
 	with (o_platform) {
-		if (old_y < self.bbox_top && other.y >= self.bbox_top && other.bbox_right >= self.bbox_left && other.bbox_left <= self.bbox_right) {
+		if (old_y < self.bbox_top && other.y >= self.bbox_top && my_bbox_right >= self.bbox_left && my_bbox_left <= self.bbox_right) {
 			other.y = self.bbox_top;
 			other.vsp = 0;
 			other.jstate = jump_state.ON_GROUND;
@@ -138,7 +140,7 @@ if (jstate != jump_state.ON_GROUND) {
 }
 
 // Falling off platform
-if (my_platform != noone && (bbox_right < my_platform.bbox_left || bbox_left > my_platform.bbox_right)) {
+if (my_platform != noone && (my_bbox_right < my_platform.bbox_left || my_bbox_left > my_platform.bbox_right)) {
 	jstate = jump_state.DOUBLE_JUMPED;
 	my_platforn = noone;
 	need_update_spr = true;
