@@ -46,6 +46,9 @@ shoot = function() {
 		enemy_fire_dir_bullet(x + 60, y - 235, s_fireeyes, 1, bullet_speed);
 		enemy_fire_dir_bullet(x + 60, y - 235, s_fireeyes, room_speed * 0.5, bullet_speed);
 		enemy_fire_dir_bullet(x + 60, y - 235, s_fireeyes, room_speed * 1, bullet_speed);
+		enemy_fire_dir_bullet(x + 60, y - 235, s_fireeyes, room_speed * 1.5, bullet_speed);
+		enemy_fire_dir_bullet(x + 60, y - 235, s_fireeyes, room_speed * 2, bullet_speed);
+		enemy_fire_dir_bullet(x + 60, y - 235, s_fireeyes, room_speed * 2.5, bullet_speed);
 	}
 }
 
