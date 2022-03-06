@@ -24,33 +24,37 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"63523d6b-e787-4adf-95dd-a74e8053a7a0","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"63523d6b-e787-4adf-95dd-a74e8053a7a0","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":{"name":"d065ab7f-0b68-4087-bebd-af1388f934d7","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_hamster_attack2","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"63523d6b-e787-4adf-95dd-a74e8053a7a0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2c64b587-9d51-446e-938b-80d2a830ab72","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2c64b587-9d51-446e-938b-80d2a830ab72","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":{"name":"d065ab7f-0b68-4087-bebd-af1388f934d7","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_hamster_attack2","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"2c64b587-9d51-446e-938b-80d2a830ab72","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7aa3db8a-54ed-42bd-b71f-9b615a2cd92b","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7aa3db8a-54ed-42bd-b71f-9b615a2cd92b","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":{"name":"d065ab7f-0b68-4087-bebd-af1388f934d7","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_hamster_attack2","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"7aa3db8a-54ed-42bd-b71f-9b615a2cd92b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"85b96175-5d15-4329-9634-d314419509ec","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"85b96175-5d15-4329-9634-d314419509ec","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":{"name":"d065ab7f-0b68-4087-bebd-af1388f934d7","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_hamster_attack2","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"85b96175-5d15-4329-9634-d314419509ec","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a090ad93-1adb-4b9a-857c-720bff05e7eb","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a090ad93-1adb-4b9a-857c-720bff05e7eb","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":{"name":"d065ab7f-0b68-4087-bebd-af1388f934d7","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_hamster_attack2","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"a090ad93-1adb-4b9a-857c-720bff05e7eb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f9ac4800-a3d7-4896-a115-c248cc6f6ced","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f9ac4800-a3d7-4896-a115-c248cc6f6ced","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":{"name":"d065ab7f-0b68-4087-bebd-af1388f934d7","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_hamster_attack2","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"f9ac4800-a3d7-4896-a115-c248cc6f6ced","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"be3af95e-fc1f-4fc0-b125-7699707bd522","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"be3af95e-fc1f-4fc0-b125-7699707bd522","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"LayerId":{"name":"d065ab7f-0b68-4087-bebd-af1388f934d7","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_hamster_attack2","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","name":"be3af95e-fc1f-4fc0-b125-7699707bd522","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_hamster_attack2","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 2.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 3.0,
+    "length": 4.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"cc05b6d9-f7ac-4589-bf8d-60ee0c968c9c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"63523d6b-e787-4adf-95dd-a74e8053a7a0","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"4a4b8060-24f4-49b4-bd53-6870a226735c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2c64b587-9d51-446e-938b-80d2a830ab72","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"bfdae9f9-4f81-4673-a2a4-e4b1eca579eb","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7aa3db8a-54ed-42bd-b71f-9b615a2cd92b","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+            {"id":"3194e4e7-5e68-4543-8a3c-f2461f6c14d7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"85b96175-5d15-4329-9634-d314419509ec","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"aab08de7-39c5-486f-92ae-0d88f79a18c5","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a090ad93-1adb-4b9a-857c-720bff05e7eb","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"06ba4d6d-602b-4515-a235-015ff8eacf45","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f9ac4800-a3d7-4896-a115-c248cc6f6ced","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"56ecc71c-0f50-42ad-8985-cc9a5d713f4b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"be3af95e-fc1f-4fc0-b125-7699707bd522","path":"sprites/s_hamster_attack2/s_hamster_attack2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
     "lockOrigin": false,
