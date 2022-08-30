@@ -25,9 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"7ff3369f-0623-47e0-b0fa-ae7e194585c2","path":"sprites/s_deathcard/s_deathcard.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7ff3369f-0623-47e0-b0fa-ae7e194585c2","path":"sprites/s_deathcard/s_deathcard.yy",},"LayerId":{"name":"a019e405-897c-49de-8b5c-bb1e50ea0da2","path":"sprites/s_deathcard/s_deathcard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"7ff3369f-0623-47e0-b0fa-ae7e194585c2","path":"sprites/s_deathcard/s_deathcard.yy",},"LayerId":{"name":"e0999901-c965-47e9-a257-fad6a6791445","path":"sprites/s_deathcard/s_deathcard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"7ff3369f-0623-47e0-b0fa-ae7e194585c2","path":"sprites/s_deathcard/s_deathcard.yy",},"LayerId":{"name":"1d17a600-ed27-48d9-9438-db113cd385f4","path":"sprites/s_deathcard/s_deathcard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"7ff3369f-0623-47e0-b0fa-ae7e194585c2","path":"sprites/s_deathcard/s_deathcard.yy",},"LayerId":{"name":"e0999901-c965-47e9-a257-fad6a6791445","path":"sprites/s_deathcard/s_deathcard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"7ff3369f-0623-47e0-b0fa-ae7e194585c2","path":"sprites/s_deathcard/s_deathcard.yy",},"LayerId":{"name":"a019e405-897c-49de-8b5c-bb1e50ea0da2","path":"sprites/s_deathcard/s_deathcard.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_deathcard","path":"sprites/s_deathcard/s_deathcard.yy",},"resourceVersion":"1.0","name":"7ff3369f-0623-47e0-b0fa-ae7e194585c2","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -61,7 +61,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_deathcard","path":"sprites/s_deathcard/s_deathcard.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_deathcard",
     "tags": [],
     "resourceType": "GMSequence",

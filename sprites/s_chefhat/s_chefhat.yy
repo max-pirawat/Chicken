@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_chefhat","path":"sprites/s_chefhat/s_chefhat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_chefhat",
     "tags": [],
     "resourceType": "GMSequence",

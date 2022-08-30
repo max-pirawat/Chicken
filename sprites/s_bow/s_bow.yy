@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_bow","path":"sprites/s_bow/s_bow.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_bow",
     "tags": [],
     "resourceType": "GMSequence",

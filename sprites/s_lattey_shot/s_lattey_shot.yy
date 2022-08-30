@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_lattey_shot","path":"sprites/s_lattey_shot/s_lattey_shot.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_lattey_shot",
     "tags": [],
     "resourceType": "GMSequence",

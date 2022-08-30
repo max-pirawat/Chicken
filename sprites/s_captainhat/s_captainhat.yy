@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_captainhat","path":"sprites/s_captainhat/s_captainhat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_captainhat",
     "tags": [],
     "resourceType": "GMSequence",

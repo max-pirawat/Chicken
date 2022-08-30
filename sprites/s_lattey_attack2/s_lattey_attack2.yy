@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_lattey_attack2","path":"sprites/s_lattey_attack2/s_lattey_attack2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_lattey_attack2",
     "tags": [],
     "resourceType": "GMSequence",

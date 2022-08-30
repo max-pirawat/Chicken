@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_chefsuit","path":"sprites/s_chefsuit/s_chefsuit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_chefsuit",
     "tags": [],
     "resourceType": "GMSequence",

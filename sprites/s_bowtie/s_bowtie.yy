@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_bowtie","path":"sprites/s_bowtie/s_bowtie.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_bowtie",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_bowhat","path":"sprites/s_bowhat/s_bowhat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_bowhat",
     "tags": [],
     "resourceType": "GMSequence",

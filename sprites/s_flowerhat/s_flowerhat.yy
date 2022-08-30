@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_flowerhat","path":"sprites/s_flowerhat/s_flowerhat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_flowerhat",
     "tags": [],
     "resourceType": "GMSequence",

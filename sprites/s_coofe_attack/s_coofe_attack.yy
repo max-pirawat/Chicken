@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_coofe_attack","path":"sprites/s_coofe_attack/s_coofe_attack.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_coofe_attack",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_lattey_death","path":"sprites/s_lattey_death/s_lattey_death.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_lattey_death",
     "tags": [],
     "resourceType": "GMSequence",

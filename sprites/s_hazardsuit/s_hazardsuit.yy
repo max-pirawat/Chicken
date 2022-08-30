@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_hazardsuit","path":"sprites/s_hazardsuit/s_hazardsuit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_hazardsuit",
     "tags": [],
     "resourceType": "GMSequence",

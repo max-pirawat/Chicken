@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_backpack","path":"sprites/s_backpack/s_backpack.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_backpack",
     "tags": [],
     "resourceType": "GMSequence",

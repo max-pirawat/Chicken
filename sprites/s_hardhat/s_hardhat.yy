@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_hardhat","path":"sprites/s_hardhat/s_hardhat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_hardhat",
     "tags": [],
     "resourceType": "GMSequence",

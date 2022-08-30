@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_helmet","path":"sprites/s_helmet/s_helmet.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_helmet",
     "tags": [],
     "resourceType": "GMSequence",

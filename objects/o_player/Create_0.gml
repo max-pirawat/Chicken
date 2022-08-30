@@ -39,6 +39,8 @@ hsp = 0; // horizontal speed
 vsp = 0;
 my_platform = noone;
 jump_dash = max_jump_dash;
+curr_weapon = 0;
+walk_audio = noone;
 #endregion
 
 #region accessory 
@@ -57,6 +59,10 @@ hurt = function(dir) {
 			state = player_state.DYING;
 			die_cooldown = die_duration;
 			set_current_spr(spr_dying, 0);
+			if (walk_audio) {
+				audio_stop_sound(walk_audio);
+				walk_audio = noone;
+			}
 		} else {
 			hsp = 5 * dir;
 			vsp = -15;

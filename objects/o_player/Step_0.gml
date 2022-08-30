@@ -263,3 +263,18 @@ if (fire && fire_cooldown == 0 && specials >= 1) {
 	
 }
 #endregion
+
+#region Play sound
+if ((state == player_state.RUN) && (jstate == jump_state.ON_GROUND)) {
+	if (walk_audio == noone) {
+		walk_audio = audio_play_sound(snd_chicken_walk, 0, true);	
+	}
+} else {
+	if (walk_audio) {
+		audio_stop_sound(walk_audio);
+		walk_audio = noone;
+	}
+}
+
+#endregion
+

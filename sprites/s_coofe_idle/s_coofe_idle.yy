@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_coofe_idle","path":"sprites/s_coofe_idle/s_coofe_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_coofe_idle",
     "tags": [],
     "resourceType": "GMSequence",

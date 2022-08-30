@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_coofe_bullet","path":"sprites/s_coofe_bullet/s_coofe_bullet.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_coofe_bullet",
     "tags": [],
     "resourceType": "GMSequence",

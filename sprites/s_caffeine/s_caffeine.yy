@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_caffeine","path":"sprites/s_caffeine/s_caffeine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_caffeine",
     "tags": [],
     "resourceType": "GMSequence",

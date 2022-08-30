@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_tophat","path":"sprites/s_tophat/s_tophat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_tophat",
     "tags": [],
     "resourceType": "GMSequence",

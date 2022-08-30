@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_frappe_idle","path":"sprites/s_frappe_idle/s_frappe_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_frappe_idle",
     "tags": [],
     "resourceType": "GMSequence",

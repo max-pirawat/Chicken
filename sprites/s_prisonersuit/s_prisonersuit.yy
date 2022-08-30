@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_prisonersuit","path":"sprites/s_prisonersuit/s_prisonersuit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_prisonersuit",
     "tags": [],
     "resourceType": "GMSequence",

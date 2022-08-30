@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_heandband","path":"sprites/s_heandband/s_heandband.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_heandband",
     "tags": [],
     "resourceType": "GMSequence",

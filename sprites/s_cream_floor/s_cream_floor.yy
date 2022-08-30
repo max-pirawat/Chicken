@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_cream_floor","path":"sprites/s_cream_floor/s_cream_floor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_cream_floor",
     "tags": [],
     "resourceType": "GMSequence",

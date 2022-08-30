@@ -8,6 +8,7 @@ if (state == enemy_state.DYING) {
 	image_alpha =  clamp(4 * die_cooldown / die_duration, 0, 1.0);
 	if (die_cooldown == 0) {
 		state = enemy_state.DIED;
+		
 		room_goto_next();
 	}
 	return;	

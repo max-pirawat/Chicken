@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_gototitlesreecan","path":"sprites/s_gototitlesreecan/s_gototitlesreecan.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_gototitlesreecan",
     "tags": [],
     "resourceType": "GMSequence",

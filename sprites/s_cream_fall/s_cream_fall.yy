@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_cream_fall","path":"sprites/s_cream_fall/s_cream_fall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_cream_fall",
     "tags": [],
     "resourceType": "GMSequence",

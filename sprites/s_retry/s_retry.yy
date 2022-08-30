@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_retry","path":"sprites/s_retry/s_retry.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_retry",
     "tags": [],
     "resourceType": "GMSequence",

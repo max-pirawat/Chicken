@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_hamster_attack4","path":"sprites/s_hamster_attack4/s_hamster_attack4.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_hamster_attack4",
     "tags": [],
     "resourceType": "GMSequence",

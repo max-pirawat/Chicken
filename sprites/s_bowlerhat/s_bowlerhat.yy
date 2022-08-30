@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_bowlerhat","path":"sprites/s_bowlerhat/s_bowlerhat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_bowlerhat",
     "tags": [],
     "resourceType": "GMSequence",

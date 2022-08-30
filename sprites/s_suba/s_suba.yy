@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_suba","path":"sprites/s_suba/s_suba.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_suba",
     "tags": [],
     "resourceType": "GMSequence",

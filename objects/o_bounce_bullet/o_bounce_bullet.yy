@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "o_enemy_bullet",
-    "path": "objects/o_enemy_bullet/o_enemy_bullet.yy",
+    "name": "o_enemy_bullet_breakable",
+    "path": "objects/o_enemy_bullet_breakable/o_enemy_bullet_breakable.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

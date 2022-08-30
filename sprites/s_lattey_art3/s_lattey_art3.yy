@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_lattey_art3","path":"sprites/s_lattey_art3/s_lattey_art3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_lattey_art3",
     "tags": [],
     "resourceType": "GMSequence",

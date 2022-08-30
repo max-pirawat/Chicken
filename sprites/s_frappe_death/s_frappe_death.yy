@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_frappe_death","path":"sprites/s_frappe_death/s_frappe_death.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_frappe_death",
     "tags": [],
     "resourceType": "GMSequence",

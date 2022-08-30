@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_hamster_pink","path":"sprites/s_hamster_pink/s_hamster_pink.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_hamster_pink",
     "tags": [],
     "resourceType": "GMSequence",

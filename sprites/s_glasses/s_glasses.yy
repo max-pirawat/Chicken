@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_glasses","path":"sprites/s_glasses/s_glasses.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_glasses",
     "tags": [],
     "resourceType": "GMSequence",

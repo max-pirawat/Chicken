@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_officerhat","path":"sprites/s_officerhat/s_officerhat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_officerhat",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_cowboyhat","path":"sprites/s_cowboyhat/s_cowboyhat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_cowboyhat",
     "tags": [],
     "resourceType": "GMSequence",

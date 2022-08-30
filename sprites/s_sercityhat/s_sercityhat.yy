@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_sercityhat","path":"sprites/s_sercityhat/s_sercityhat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_sercityhat",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_visor","path":"sprites/s_visor/s_visor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_visor",
     "tags": [],
     "resourceType": "GMSequence",

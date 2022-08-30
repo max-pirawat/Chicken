@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_senseihat","path":"sprites/s_senseihat/s_senseihat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_senseihat",
     "tags": [],
     "resourceType": "GMSequence",

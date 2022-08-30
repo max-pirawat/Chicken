@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_flood","path":"sprites/s_flood/s_flood.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_flood",
     "tags": [],
     "resourceType": "GMSequence",

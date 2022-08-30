@@ -115,7 +115,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_frappe_attack3","path":"sprites/s_frappe_attack3/s_frappe_attack3.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_frappe_attack3",
     "tags": [],
     "resourceType": "GMSequence",

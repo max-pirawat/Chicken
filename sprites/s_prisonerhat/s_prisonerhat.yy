@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_prisonerhat","path":"sprites/s_prisonerhat/s_prisonerhat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_prisonerhat",
     "tags": [],
     "resourceType": "GMSequence",
